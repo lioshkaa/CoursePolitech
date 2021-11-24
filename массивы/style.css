@@ -1,0 +1,23 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    justify-content: center;
+    margin-top: 410px;
+}
+label{
+    text-align: left;
+    color: coral;
+    padding-bottom: 4px;
+}
+input{
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+input:last-child{
+    margin-bottom: 0;
+}
+p{
+    color: red;
+}
