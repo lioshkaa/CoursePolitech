@@ -54,7 +54,14 @@ const winner=()=>{
         item.classList.add('disabled')
       })
    
-    }  
+    }
+     if(move===8){
+       score++;
+       document.getElementById('winnerX0').innerHTML=score;
+         box.forEach(item=>{
+        item.classList.add('disabled')
+      })
+     }
     
   }
 }
