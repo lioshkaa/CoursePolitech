@@ -100,7 +100,6 @@ const enabledOptions = () => {
     item.classList.remove("disabled", "correct", "wrong");
   });
 };
-
 const validate = () => {
   if (!optionElement[0].classList.contains("disabled")) {
     alert("Вам нужно выбарать");
@@ -124,4 +123,3 @@ btnNext.addEventListener("click", () => {
 window.addEventListener("load", () => {
   randomQuestion();
 });
-
