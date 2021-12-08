@@ -14,6 +14,7 @@ const numberOfQuestion = document.getElementById("number-of-question"),
   numberOfAllQuestion = document.getElementById("number-of-all-questions");
 let indexOfPage = 0;
 let indexOfQuestion = 0;
+let audio = new Audio();
 const questions = [
   {
     question: "30*90 = ?",
@@ -46,8 +47,7 @@ const randomQuestion = () => {
   let randomNumber = Math.floor(Math.random() * questions.length);
   let hitDuplicate = false;
   if (indexOfPage === questions.length) {
-    let audio = new Audio(); 
-    audio.src = "Record3.mp3"; 
+    audio.src = "Record3.mp3";
     audio.autoplay = true;
   } else {
     if (completedAnswers.length > 0) {
@@ -73,12 +73,10 @@ const randomQuestion = () => {
 const checkAnswer = (el) => {
   if (el.target.dataset.id == questions[indexOfQuestion].rightAnswer) {
     el.target.classList.add("correct");
-    var audio = new Audio();
-    audio.src = "Record.mp3"; 
+    audio.src = "Record.mp3";
     audio.autoplay = true;
   } else {
-     
-    audio.src = "Record(1).mp3"; 
+    audio.src = "Record(1).mp3";
     audio.autoplay = true;
     el.target.classList.add("wrong");
   }
@@ -100,6 +98,7 @@ const enabledOptions = () => {
     item.classList.remove("disabled", "correct", "wrong");
   });
 };
+
 const validate = () => {
   if (!optionElement[0].classList.contains("disabled")) {
     alert("Вам нужно выбарать");
@@ -110,8 +109,8 @@ const validate = () => {
 };
 
 const quizOver = () => {
-  document.querySelector(".modal").classList.add("active"); 
-  audio.src = "Record3.mp3"; 
+  document.querySelector(".modal").classList.add("active");
+  audio.src = "Record3.mp3";
   audio.autoplay = true;
   el.target.classList.add("wrong");
 };
