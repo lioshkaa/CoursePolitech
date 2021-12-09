@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Squid Game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="colored">Squid Game</h1>
+      <div class="modal">
+        <div class="content">
+          <h1>Приветствую тебя игрок 001</h1>
+          <button class="button">Сыграть</button>
+        </div>
+      </div>
+      <form class="form">
+        <input type="text" name="name" placeholder="Ваше имя" required />
+        <div class="buttonNextPlay">Играть</div>
+      </form>
+    </div>
+    <div class="wrap">
+      <div class="Winner">Игра началась</div>
+      <div class="modals">
+        <div class="contents">
+          <h1>каждые 5 секунд кукла будет появляться не попадись на нее!</h1>
+          <div class="buttonPlayGame">Сыграть</div>
+        </div>
+      </div>
+      <div class="game">
+        <div id="player">
+          <img src="img/player.png" width="200" height="200" />
+        </div>
+          <img src="img/pngwing.com (2).png" id="doll" />
+
+      </div>
+
+    <audio src="SquidGame.mp3" autoplay></audio>
+    <script src="js/script.js"></script>
+  </body>
+</html>
