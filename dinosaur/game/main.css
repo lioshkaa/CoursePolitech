@@ -1,0 +1,109 @@
+body {
+  background-color: turquoise;
+}
+.game {
+  width: 600px;
+  height: 200px;
+  border-bottom: 1px solid #000;
+  margin: auto;
+}
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/rex3.jpg);
+  background-size: 50px 50px;
+  position: relative;
+  background-color: white;
+  top: 150px;
+}
+.h1_inner {
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  background-image: url(../img/cactus.png);
+  background-size: 20px 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  animation: cactusMov 1s infinite linear;
+}
+@keyframes cactusMov {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+.jump {
+  animation: jump 0.3s linear;
+}
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 130px;
+  }
+  50% {
+    top: 80px;
+  }
+  80% {
+    top: 130px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+.btn {
+  padding: 15px 50px;
+  border: none;
+  background-color: #ff9800;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+  margin: 40px auto;
+  font-size: 20px;
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  display: none;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-content {
+  background-color: darkcyan;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  flex-basis: 100px;
+  text-align: center;
+  color: #fff;
+  transition: 5s;
+}
+.game.none {
+  display: none;
+}
+.modal.hide {
+  display: flex;
+}
